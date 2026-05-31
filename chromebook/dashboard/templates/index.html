@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>
+    Homelab Control Center
+</title>
+
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <div>
+
+        <h1>
+            Homelab Control Center
+        </h1>
+
+        <div class="subtitle">
+
+            Infrastructure Control Plane
+
+        </div>
+
+    </div>
+
+    <button
+        id="themeToggle"
+        class="theme-btn">
+
+        Toggle Theme
+
+    </button>
+
+</div>
+
+<div class="top-grid">
+
+    <div class="card">
+
+        <h2>
+            Infrastructure
+        </h2>
+
+        <div id="status">
+
+            Loading...
+
+        </div>
+
+        <div class="refresh-section">
+
+            <div>
+
+                Last Updated
+
+            </div>
+
+            <div id="lastRefresh">
+
+                Never
+
+            </div>
+
+            <div
+                id="staleWarning"
+                class="warning">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        id="hostCard"
+        class="card">
+
+        Loading Host...
+
+    </div>
+
+</div>
+
+<h2>
+
+    Virtual Machines
+
+</h2>
+
+<div
+    id="vmContainer"
+    class="card-grid">
+
+    Loading VMs...
+
+</div>
+
+<div class="card">
+
+    <h2>
+
+        Activity
+
+    </h2>
+
+    <div
+        id="activityLog"
+        class="activity-log">
+
+    </div>
+
+</div>
+
+<div
+    id="confirmModal"
+    class="modal-backdrop">
+
+    <div class="modal">
+
+        <h2>
+
+            Confirm Action
+
+        </h2>
+
+        <p>
+
+            Type
+
+            <strong>confirm</strong>
+
+            to continue.
+
+        </p>
+
+        <input
+            id="confirmInput"
+            type="text">
+
+        <div class="modal-buttons">
+
+            <button
+                id="cancelModalButton"
+                class="cancel-btn">
+
+                Cancel
+
+            </button>
+
+            <button
+                id="confirmModalButton"
+                class="danger-btn"
+                disabled>
+
+                Confirm
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script
+    src="{{ url_for('static', filename='dashboard.js') }}">
+</script>
+
+</body>
+
+</html>
+
