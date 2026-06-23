@@ -1,7 +1,11 @@
 from flask import Flask, jsonify, render_template
 import subprocess
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="../dashboard/templates",
+    static_folder="../dashboard/static"
+)
 
 ROUTER_IP = "192.168.10.1"
 PROXMOX_IP = "192.168.10.9"
