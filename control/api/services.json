@@ -1,0 +1,25 @@
+{
+    "minecraft": {
+        "host": "mcserver",
+        "user": "finn",
+        "service": "minecraft"
+    },
+
+    "postgresql": {
+        "host": "control",
+        "user": "finn",
+        "service": "postgresql"
+    },
+
+    "dashboard": {
+        "host": "control",
+        "user": "finn",
+        "service": "homelab-dashboard"
+    },
+
+    "tailscale": {
+        "host": "control",
+        "user": "root",
+        "service": "tailscaled"
+    }
+}
